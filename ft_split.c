@@ -6,7 +6,7 @@
 /*   By: yerkiral <yerkiral@42kocaeli.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/01 22:04:20 by yerkiral          #+#    #+#             */
-/*   Updated: 2022/02/03 04:03:02 by yerkiral         ###   ########.fr       */
+/*   Updated: 2022/02/04 14:43:38 by yerkiral         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ void	ft_final(long nos, char c, char **final, char const *s)
 		if (s[i] != c)
 		{
 			start = i;
-			while (s[i] != c)
+			while (s[i] != c && s[i] != '\0')
 				i++;
 			final[done] = ft_doop(start, i, s, i - start);
 			done++;
@@ -91,3 +91,20 @@ char	**ft_split(char const *s, char c)
 	else
 		return (NULL);
 }
+
+//	int main()
+//	{
+//		char s[] = "Tripouille";
+//		char c = ' ';
+//		char **result;
+//		int i;
+//	
+//		i = 0;
+//		result = ft_split(s, c);
+//		while (result[i] != NULL)
+//		{
+//			printf("%s\n", result[i]);
+//			i++;
+//		}
+//		return (0);
+//	}
